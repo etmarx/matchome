@@ -1,0 +1,12 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+amazon:
+  dynamodb:
+    endpoint: http://localhost:8000/
+  aws:
+    accessKey: user
+    secretKey: password

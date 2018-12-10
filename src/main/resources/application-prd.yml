@@ -1,0 +1,7 @@
+amazon:
+  dynamodb:
+    endpoint: http://dynamodb.us-west-2.amazonaws.com
+  aws:
+    accesskey:
+  aws:
+    secretkey:
