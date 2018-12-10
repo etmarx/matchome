@@ -28,7 +28,7 @@ public class HomeService {
      * Saves home.
      *
      * @param home home object
-     * @return UUID home id
+     * @return String (UUID) home id
      */
     public String saveHome(Home home) {
 

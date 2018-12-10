@@ -1,5 +1,6 @@
 package com.matchome.controller;
 
+import com.matchome.exception.MatchHomeInvalidEmailAddressException;
 import com.matchome.exception.MatchHomeNotFoundException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler({IllegalArgumentException.class})
+    @ExceptionHandler({IllegalArgumentException.class, MatchHomeInvalidEmailAddressException.class})
     public ResponseEntity<String> handleBadRequestException(Exception e) {
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Content-Type", "application/problem+json")
